@@ -1,3 +1,4 @@
+import { Users } from './../../interface/users';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  public userLogin: Users = {};
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login(){
+    console.log(this.userLogin);
   }
 
 }

@@ -1,0 +1,101 @@
+
+
+
+
+.div_main{
+    text-align: center;
+    align-content: center;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: #17521d;
+
+    .h1{
+        font-family: Optima, sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 250%;
+    }
+
+
+    .div_img{
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        right: 0;
+        height: 50%;
+        background-image: url('../../../assets/img/quimonoverde.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+            
+        .div_register{
+
+        margin-left: 15%;
+        margin-right: 15%;
+
+        .input_registername{
+            background-color: white;
+            width: 100%;
+        }
+
+        .input_registeremail{
+            background-color: white;
+            width: 100%;
+        }
+
+        .input_registerpassword{
+            background-color: white;
+            width: 100%;
+        }
+
+        .input_registerconfirmpassword{
+            background-color: white;
+            width: 100%;
+        }
+
+        .p{
+            font-family: Optima, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 150%;
+            color: white;
+        }
+    
+        .p2{
+            font-family: Optima, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 120%;
+            color: white;
+        }
+        
+        .btn_confirmar{
+            border-radius: 10px;
+            width: 100%;
+        }
+    
+        .link_cadastro{
+            text-decoration: none;
+            font-family: Optima, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 100%;
+            color: white;
+        }
+
+        }
+
+        
+    }
+    
+
+    .footer_registerpage{
+        bottom: 95%;
+        left: 0;
+        margin: 0 auto;
+        font-size: 70%;
+        border-top: 5% black;
+    }
+
+}
