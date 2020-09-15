@@ -15,9 +15,9 @@
           <p class="p">Senha</p>
           <ion-input type="password" name="input_loginpassword" id="input_loginpassword" class="input_loginpassword" [(ngModel)]="userLogin.password"></ion-input><br><br>
 
-          <ion-button color="light" shape="round" fill="outline" size="large" expand="block" onclick="login()">Entrar</ion-button>
+          <ion-button color="light" shape="round" fill="outline" size="large" expand="block" (click)="login()">Entrar</ion-button>
 
-          <p class="p2">Não possui login? <br><a class="link_cadastro" href="http://">Cadastre-se</a></p>
+          <p class="p2">Não possui login? <br><a class="link_cadastro" href="/register">Cadastre-se</a></p>
 
         </div>
 

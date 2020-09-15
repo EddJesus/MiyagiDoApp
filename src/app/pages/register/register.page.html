@@ -27,7 +27,7 @@
         <ion-input type="password" name="input_registerconfirmpassword" id="input_registerconfirmpassword"
           class="input_registerconfirmpassword" [(ngModel)]="userRegister.confirmpassword"></ion-input><br><br>
 
-        <ion-button color="light" shape="round" fill="outline" size="large" expand="block" onclick="register()">
+        <ion-button color="light" shape="round" fill="outline" size="large" expand="block"  (click)="register()">
           Confirmar</ion-button>
 
 
