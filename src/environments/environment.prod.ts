@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebaseweb: {
-    apiKey: "AIzaSyAUGeQO-gqGOj8LhCMeIrGkL_jmNRa8h24",
-    authDomain: "miyagi-do-teste.firebaseapp.com",
-    databaseURL: "https://miyagi-do-teste.firebaseio.com",
-    projectId: "miyagi-do-teste",
-    storageBucket: "miyagi-do-teste.appspot.com",
-    messagingSenderId: "280929257040",
-    appId: "1:280929257040:web:4b313430108c336b58f355",
-    measurementId: "G-BGJKHG8JRB"
+    apiKey: "AIzaSyAgf68SpIhOI0O0kTj8LdYcaZagRhNWMCM",
+    authDomain: "miyagi-do.firebaseapp.com",
+    databaseURL: "https://miyagi-do.firebaseio.com",
+    projectId: "miyagi-do",
+    storageBucket: "miyagi-do.appspot.com",
+    messagingSenderId: "872182500490",
+    appId: "1:872182500490:web:40784118c6eea5cc1ef173",
+    measurementId: "G-66NXSMWGWL"
   }
 };

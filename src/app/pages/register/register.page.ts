@@ -1,7 +1,7 @@
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { Users } from 'src/app/interface/users';
+import { Users } from 'src/app/interfaces/users';
 
 @Component({
   selector: 'app-register',

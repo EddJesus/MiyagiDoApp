@@ -1,7 +1,16 @@
+
+<ion-header>
+
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+
+</ion-header>
+
 <ion-content>
 
-  <div class="div_main">
-    
+    <div class="div_main">
+
     <br>
     <h1 class="h1">Miyagi Do</h1>
 
@@ -12,20 +21,16 @@
 
 
         <p class="p">Nome</p>
-        <ion-input type="text" name="input_registername" id="input_registername" class="input_registername"
+        <ion-input type="text" placeholder="nome" name="input_registername" id="input_registername" class="input_registername"
           [(ngModel)]="userRegister.name"></ion-input>
 
         <p class="p">Email</p>
-        <ion-input type="email" name="input_registeremail" id="input_registeremail" class="input_registeremail"
+        <ion-input type="email" placeholder="email" name="input_registeremail" id="input_registeremail" class="input_registeremail"
           [(ngModel)]="userRegister.email"></ion-input>
 
         <p class="p">Senha</p>
-        <ion-input type="password" name="input_registerpassword" id="input_registerpassword"
-          class="input_registerpassword" [(ngModel)]="userRegister.password"></ion-input>
-
-        <p class="p">Confirmar senha</p>
-        <ion-input type="password" name="input_registerconfirmpassword" id="input_registerconfirmpassword"
-          class="input_registerconfirmpassword" [(ngModel)]="userRegister.confirmpassword"></ion-input><br><br>
+        <ion-input type="password" placeholder="senha" name="input_registerpassword" id="input_registerpassword"
+          class="input_registerpassword" [(ngModel)]="userRegister.password"></ion-input><br><br>
 
         <ion-button color="light" shape="round" fill="outline" size="large" expand="block"  (click)="register()">
           Confirmar</ion-button>

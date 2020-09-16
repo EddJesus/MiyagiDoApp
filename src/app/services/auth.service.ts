@@ -1,4 +1,4 @@
-import { Users } from './../interface/users';
+import { Users } from '../interfaces/users';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
@@ -18,7 +18,7 @@ export class AuthService {
   }
 
   logout() {
-
+    return this.afa.signOut();
   }
 
   getAuth() {

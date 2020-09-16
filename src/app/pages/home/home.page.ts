@@ -1,5 +1,9 @@
+import { AuthService } from './../../services/auth.service';
+import { ProductService } from './../../services/product.service';
+import { Product } from './../../interfaces/product';
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { Subscription } from 'rxjs';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,62 +13,54 @@ import { ApiService } from '../../services/api.service';
 
 export class HomePage {
 
-  constructor(private apiService: ApiService) { 
+  public loading: any;
+  public toast: any;
+  public products = new Array<Product>();
+  private productsSubscription: Subscription;
 
-    //declara as funções do CRUD dentro dessa page
+  constructor(
+    private loadingCtrl: LoadingController,
+    private toastCtrl: ToastController,
+    private productsService: ProductService,
+    private authService: AuthService
+    ) { 
 
-    this.createData();
-    this.readData();
-    this.updateData();
-    this.deleteData();
+    this.productsSubscription = this.productsService.getProducts().subscribe(data => {
+      this.products = data;
+    });
 
   }
 
-  createData(){
+  ngOnInit(){}
 
-    //criando o objeto que vai ser enviado
-    const data: any = { 
-      title: 'Eduardo',
-      body: 'teste',
-      userId: 10
+  ngOnDestroy(){
+    this.productsSubscription.unsubscribe();
+  }
+
+  async logout(){
+    try{
+      await this.authService.logout();
+    }catch(error){
+      console.error(error);
     }
-
-    //ação da função -> chama a api passando a função 'createData()' com a 'data' como parametro
-    this.apiService.createData(data).subscribe(data =>{
-      console.log(data); //retornando a resposta do servidor no console.log
-    });
   }
 
-  readData(){
-
-    //ação da função -> chama a api passando a funçaõ 'readData()'
-    this.apiService.readData().subscribe(data =>{
-      console.log(data); //retornando a resposta do servidor no console.log
-    });
+  async deleteProduct(id: string){
+    try{
+      await this.productsService.deleteProduct(id);
+    }catch(error){
+      this.presentToast('Erro ao tentar salvar!')
+    }
   }
 
-  updateData(){
-
-    //criando o objeto que vai ser atualizado
-    const data: any = {
-      title: 'Eduardo2',
-      body: 'teste2',
-      userId: 7
-    };
-
-    //ação da função -> chama a api passando a função 'updateData()' com a 'data' como parametro
-    this.apiService.updateData(data).subscribe(data =>{
-      console.log(data); //retornando a resposta do servidor no console.log
-    });
-
+  async presentLoading() {
+    this.loading = await this.loadingCtrl.create({ message: 'Por favor aguarde...' });
+    return this.loading.present();
   }
 
-  deleteData(){
-
-    //ação da função -> chama a api passando a funçaõ 'deleteData()' para deletar o objeto escolhido
-    this.apiService.deleteData().subscribe(data =>{
-      console.log(data); //retornando a resposta do servidor no console.log
-    });
+  async presentToast(message: string) {
+    this.toast = await this.toastCtrl.create({ message: message, duration: 3000 });
+    return this.toast.present();
   }
 
 }

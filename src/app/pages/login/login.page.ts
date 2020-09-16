@@ -1,6 +1,6 @@
 import { AuthService } from './../../services/auth.service';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { Users } from './../../interface/users';
+import { Users } from './../../interfaces/users';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

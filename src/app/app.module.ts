@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule, 
     HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebaseweb),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ], 
 
   providers: [

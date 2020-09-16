@@ -10,10 +10,10 @@
         <div class="div_login">
 
           <p class="p">Email</p>
-          <ion-input type="email" name="input_loginemail" id="input_loginemail" class="input_loginemail" [(ngModel)]="userLogin.email"></ion-input>
+          <ion-input type="email" placeholder="email" name="input_loginemail" id="input_loginemail" class="input_loginemail" [(ngModel)]="userLogin.email"></ion-input>
 
           <p class="p">Senha</p>
-          <ion-input type="password" name="input_loginpassword" id="input_loginpassword" class="input_loginpassword" [(ngModel)]="userLogin.password"></ion-input><br><br>
+          <ion-input type="password" placeholder="senha" name="input_loginpassword" id="input_loginpassword" class="input_loginpassword" [(ngModel)]="userLogin.password"></ion-input><br><br>
 
           <ion-button color="light" shape="round" fill="outline" size="large" expand="block" (click)="login()">Entrar</ion-button>
 
