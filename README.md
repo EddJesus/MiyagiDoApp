@@ -22,5 +22,4 @@ Product:
 - Exclusão de produtos
 
 ### Licenças:
-- Uso do código restríto a entidade Interact Club - Rotary International
 - Desenvolvido por: Eduardo de Jesus Santos
